@@ -39,7 +39,26 @@
     @media(max-width:750px){.office-intro-layout{grid-template-columns:1fr;}.office-intro-image{height:260px;min-height:0;}}
     @media(max-width:850px){.grid{grid-template-columns:repeat(2,minmax(0,1fr));}main{padding-top:45px;}}
     @media(max-width:560px){.office-intro{padding:24px 20px;}.office-intro h2{font-size:21px;}.office-intro p{font-size:14px;}.grid{grid-template-columns:1fr;}.tile{min-height:150px;}main{padding:38px 18px 58px;} .wrap{padding-left:18px;padding-right:18px;}}
-  </style>
+  
+/* 공통 반응형 보완: 데이터·분석 로직 변경 없음 */
+html{width:100%;overflow-x:hidden;-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{width:100%;min-width:0;overflow-x:hidden}
+img,svg,canvas{max-width:100%}
+button,select,input{max-width:100%}
+:where(button,a,select,input):focus-visible{outline:3px solid #3284dc;outline-offset:2px}
+@media(hover:none){button,a{ -webkit-tap-highlight-color:rgba(50,132,220,.13)}}
+
+
+.wrap,main,.grid,.tile,.office-intro,.office-intro-layout,.office-intro-content{min-width:0}
+.office-intro p{overflow-wrap:break-word;word-break:keep-all}
+.tile h3,.tile p{overflow-wrap:anywhere}
+@media(min-width:1200px){.office-intro-layout{grid-template-columns:minmax(0,2fr) minmax(0,1fr)}}
+@media(min-width:768px) and (max-width:1199px){.office-intro-layout{grid-template-columns:minmax(0,2fr) minmax(0,1fr);gap:18px}.office-intro{padding:24px}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:767px){.office-intro-layout{grid-template-columns:minmax(0,1fr)}.office-intro-image{height:clamp(200px,45vw,310px);min-height:0}.office-intro{margin-bottom:30px}.intro{margin-bottom:23px}}
+@media(max-width:600px){header .wrap{padding-top:18px;padding-bottom:18px}.brand{font-size:clamp(20px,6vw,26px);line-height:1.4}.subtitle{line-height:1.6}.wrap{padding-left:16px;padding-right:16px}main{padding:26px 15px 46px}.office-intro{padding:19px 17px;border-radius:12px}.office-intro h2{font-size:19px;line-height:1.5;margin-bottom:12px}.office-intro p{font-size:14px;line-height:1.85}.grid{grid-template-columns:minmax(0,1fr);gap:12px}.tile{min-height:140px;padding:20px;border-radius:12px}.active{padding-top:17px}.tile h3{font-size:19px}.status{margin-top:15px}.intro h2{font-size:22px}.intro p{font-size:13px}}
+@media(min-width:601px) and (max-width:767px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+</style>
 </head>
 <body>
   <header><div class="wrap"><h1 class="brand">일등현대부동산중개사무소</h1><p class="subtitle">지역 부동산 정보 · 데이터 분석 서비스</p></div></header>
